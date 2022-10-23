@@ -15,7 +15,7 @@ app.use(express.static(__dirname+"/index"));
 app.post("/",function(req,res){
     const Year=req.body.year;
     const Food=req.body.food;
-    var mail="abc"+Math.random()+"@gmail.com";
+    const mail="abc"+Math.random()+"@gmail.com";
     const data={
        members:[
            {
