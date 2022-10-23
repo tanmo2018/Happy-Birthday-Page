@@ -1,8 +1,7 @@
 const express=require("express");
 const bodyparser=require("body-parser");
 const http=require("https");
-// api 729b966930f7af1773ffb2c7fe2bef23-us11
-// unique id 5cdd3c8df7
+
 const app=express();
 app.use(express.static(__dirname+"/login"));
 app.use(express.urlencoded({extended:true}));
@@ -48,6 +47,6 @@ app.post("/",function(req,res){
    });
 
    
-app.listen(3000,function(){
+app.listen(3000 || process.env.PORT,function(){
 console.log("Server is connected on port 3000");
 });
