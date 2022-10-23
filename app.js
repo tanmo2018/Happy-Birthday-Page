@@ -1,6 +1,7 @@
 const express=require("express");
 const bodyparser=require("body-parser");
 const http=require("https");
+const PORT = process.env.PORT || 3000;
 
 const app=express();
 app.use(express.static(__dirname+"/login"));
@@ -47,6 +48,6 @@ app.post("/",function(req,res){
    });
 
    
-app.listen(3000 || process.env.PORT,function(){
+app.listen(PORT,function(){
 console.log("Server is connected on port 3000");
 });
